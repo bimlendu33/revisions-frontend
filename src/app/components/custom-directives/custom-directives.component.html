@@ -1,0 +1,21 @@
+<div class="row m-auto">
+    <div class="col-sm-6 col-lg-4  my-2">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-subtitle mb-2">Custom Attribute Directive</h5>
+                <p class="card-text" appRandomColorHover [hoverin]="'red'" [hoverout]="'blue'">
+                    Hover me to create Random color text
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-4 my-2">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-subtitle mb-2">Custom Structural Directive</h5>
+                <p class="card-text" *appIfAdmin="isAdmin">I Am Admin right block</p>
+                <p class="card-text" *appIfAdmin="!isAdmin">I Am Non-Admin right block</p>
+            </div>
+        </div>
+    </div>
+</div>
