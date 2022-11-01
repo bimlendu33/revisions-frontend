@@ -1,0 +1,36 @@
+<div class="row m-auto">
+    <div class="col-md-4 col-lg-4 col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-subtitle mb-2">ng-content</h5>
+                <div class="card-text">
+                    <div class="text-muted">
+                        <small>This is used to pass data via component call.</small>
+                    </div>
+                    <app-container-type-child>
+                        <div #param1>Hello I am param data1 for component</div>
+                        <div class="param2">Hello I am param data2 for component</div>
+                    </app-container-type-child>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-lg-4 col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-subtitle mb-2">ng-container</h5>
+                <div class="card-text">
+                    <div class="text-muted">
+                        <div *ngIf="true">
+                            Test
+                            <ng-template *ngFor="let  i of [1,2,3,4]">
+                                {{i}}
+                            </ng-template>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
